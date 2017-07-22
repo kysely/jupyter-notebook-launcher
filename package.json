@@ -1,6 +1,6 @@
 {
   "name": "jupyter-notebook-launcher",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Manage Jupyter Notebook servers from menu bar (macOS-only)",
   "main": "app/app.js",
   "scripts": {

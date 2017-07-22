@@ -6,7 +6,7 @@ import { updateMenu, loadingMenu } from './menu'
 import launch from './launch'
 import { ensureJupyter } from './ensureJupyter'
 import { startWatching } from './state'
-import { autoUpdater } from "electron-updater"
+import checkForUpdates from './update'
 import packagejson from '../package.json'
 
 const trayIcon = {
@@ -41,13 +41,7 @@ app
 
             updateMenu()
             startWatching()
-
-            autoUpdater.checkForUpdates()
-
-            autoUpdater.on('update-downloaded', (info) => {
-                console.log(info)
-                autoUpdater.quitAndInstall()
-            })
+            checkForUpdates()
         })
     })
     .on('window-all-closed', () => {}) // Prevent app.quit() when help window closes

@@ -14,7 +14,9 @@ const R = {
                 'It seems the starting \'jupyter\' command wasn\'t found on your computer.'],
     ERR_GENER:  (title, err) => [title, `Here's what we know: ${err.message}`],
     ERR_LOCEXE: (err) => ['Can\'t find Jupyter Notebook', `Here's what we know: ${err}`],
-    ERR_WRONG:  'Oops, something went wrong'
+    ERR_WRONG:  'Oops, something went wrong',
+    UPD_AVA:    (update) => `Good news!\nNew version of app is available! Do you want to download ${update.version}?`,
+    UPD_AVA_B:  ['Download Update', 'No, thanks'],
 }
 
 
@@ -33,12 +35,17 @@ const M = {
     LIST_NONE: 'No Notebooks Running...',
 }
 
-const openDialog = (type, title = R.ERR_WRONG, body = '') => {
-    if (type === 'err') {
-        dialog.showErrorBox(title, body)
-    }
+
+const throwError = (title = R.ERR_WRONG, body = '') => {
+    dialog.showErrorBox(title, body)
+    return
 }
 
-const throwError = (title, body) => openDialog('err', title, body)
+const askDialog = (body = '', buttons = [], answer = () => {}) => {
+    dialog.showMessageBox({ message: body, buttons, defaultId: 0 }, index => {
+        answer(index)
+        return
+    })
+}
 
-export { throwError, R, M }
+export { askDialog, throwError, R, M }
