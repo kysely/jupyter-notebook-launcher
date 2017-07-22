@@ -6,23 +6,16 @@
 
 </p>
 
-![Screenshot of Jupyter Notebook Launcher running on macOS](./static/screenshot.jpg)
+[![Screenshot of Jupyter Notebook Launcher running on macOS](./static/screenshot.jpg)](https://github.com/kysely/jupyter-notebook-launcher/releases/latest)
 
 
-## It's so simple you'll get it...
-But here are few tips anyway
+### Drag any folder onto app icon to launch server
+![Drag any folder onto menubar icon to launch the server; screen animation](./static/help_dragndrop.gif)
 
-![Drag any folder onto menubar icon to launch the server](./static/help_dragndrop.gif)
+### Alt+Click to shut down the running server
+![Alt+Click to shut down the running server; screen animation](./static/help_shutdown.gif)
 
-![Alt+Click to shut down the running server](./static/help_shutdown.gif)
-
-### Know your shortcuts
-Action                 | Shortcut
------------------------| -----------------------
-Open server in browser | <kbd>Click</kbd> on server
-Shut down server       | <kbd>Alt</kbd> <kbd>Click</kbd> on server
-New server             | <kbd>Cmd</kbd> <kbd>N</kbd>
-Quit                   | <kbd>Cmd</kbd> <kbd>Q</kbd>
+## [Download Latest](https://github.com/kysely/jupyter-notebook-launcher/releases/latest)
 
 ## License
 MIT
