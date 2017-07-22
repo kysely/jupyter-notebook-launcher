@@ -1,12 +1,12 @@
 {
   "name": "jupyter-notebook-launcher",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Manage Jupyter Notebook servers from menu bar (macOS-only)",
   "main": "app/app.js",
   "scripts": {
     "build": "babel src/ --out-dir app/",
     "start": "npm run build && electron .",
-    "publish": "build --mac -p always",
+    "publish": "npm run build && build --mac -p always",
     "dist": "npm run build && electron-builder"
   },
   "repository": {
