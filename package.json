@@ -1,13 +1,14 @@
 {
   "name": "jupyter-notebook-launcher",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Manage Jupyter Notebook servers from menu bar (macOS-only)",
   "main": "app/app.js",
   "scripts": {
     "build": "babel src/ --out-dir app/",
     "start": "npm run build && electron .",
-    "publish": "npm run build && build --mac -p always",
-    "dist": "npm run build && electron-builder"
+    "dist": "npm run build && electron-builder",
+    "release": "npm run build && build --mac -p always",
+    "push": "git push -u origin master"
   },
   "repository": {
     "type": "git",
@@ -32,7 +33,7 @@
   },
   "homepage": "https://github.com/kysely/jupyter-notebook-launcher#readme",
   "build": {
-    "appId": "com.github.kysely.jupyter-notebook-launcher",
+    "appId": "digital.kysely.jupyter-notebook-launcher",
     "productName": "Jupter Notebook Launcher",
     "files": [
       "!src${/*}",
