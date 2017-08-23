@@ -1,4 +1,4 @@
-import { shell } from 'electron'
+import { shell, app } from 'electron'
 import { autoUpdater } from "electron-updater"
 import { askDialog, R } from './respond'
 
@@ -10,7 +10,10 @@ const checkForUpdates = () => {
 
     autoUpdater.on('update-available', update => {
         askDialog(R.UPD_AVA(update), R.UPD_AVA_B, index => {
-            if (index === 0) downloadUpdate()
+            if (index === 0) {
+                downloadUpdate()
+                app.quit()
+            }
         })
     })
 }
