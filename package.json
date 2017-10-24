@@ -1,6 +1,6 @@
 {
   "name": "jupyter-notebook-launcher",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Manage Jupyter Notebook servers from menu bar (macOS-only)",
   "main": "app/app.js",
   "scripts": {
@@ -34,7 +34,7 @@
   "homepage": "https://github.com/kysely/jupyter-notebook-launcher#readme",
   "build": {
     "appId": "digital.kysely.jupyter-notebook-launcher",
-    "productName": "Jupter Notebook Launcher",
+    "productName": "Jupyter Notebook Launcher",
     "files": [
       "!src${/*}",
       "!static/*.gif"
